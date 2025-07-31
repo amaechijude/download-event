@@ -1,17 +1,12 @@
 import { MoveRightIcon } from "lucide-react";
 import { Button } from "../../components/ui/button";
-import { Navbar } from "../../components/Navbar/Navbar";
 import { CountdownTimer } from "../../components/CountdownTimer/CountdownTimer";
 
 export const DesktopHero = (): JSX.Element => {
 
   return (
-    <div className="relative w-full min-h-screen bg-[#031632] overflow-x-hidden">
-      <Navbar />
-
-      <div 
-      className="relative w-full pt-[113px]"
-      style={{ backgroundImage: `url('/hero-bg.png')` }}
+      <div
+        className="relative w-full pt-[113px] bg-[url('/hero-bg.png')]"
       >
         <img
           className="absolute w-full h-[501px] bottom-0 left-0"
@@ -37,15 +32,15 @@ export const DesktopHero = (): JSX.Element => {
 
             <CountdownTimer />
           </div>
-
-          <Button className="flex w-full md:w-60 h-16 md:h-20 items-center justify-center gap-2.5 px-[46px] py-6 bg-app-secondary rounded-2xl overflow-hidden border border-solid border-[#ffffffb2]">
-            <span className="relative w-fit [font-family:'Space_Grotesk',Helvetica] font-bold text-[#f6f6f6] text-xl md:text-2xl tracking-[0] leading-[normal]">
-              Buy Ticket
-            </span>
-            <MoveRightIcon className="w-[22px] h-[22px] md:w-[26px] md:h-[26px]" />
-          </Button>
+          <a href="https://lu.ma/xuilf4vq" target="_blank" rel="noopener noreferrer">
+            <Button className="flex w-full md:w-60 h-16 md:h-20 items-center justify-center gap-2.5 px-[46px] py-6 bg-app-secondary rounded-2xl overflow-hidden border border-solid border-[#ffffffb2]">
+              <span className="relative w-fit [font-family:'Space_Grotesk',Helvetica] font-bold text-[#f6f6f6] text-xl md:text-2xl tracking-[0] leading-[normal]">
+                Register
+              </span>
+              <MoveRightIcon className="w-[22px] h-[22px] md:w-[26px] md:h-[26px]" />
+            </Button>
+          </a>
         </div>
       </div>
-    </div>
   );
 };

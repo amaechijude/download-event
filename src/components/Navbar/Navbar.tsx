@@ -2,19 +2,25 @@ import { Menu, MoveRightIcon, X } from "lucide-react";
 import { Button } from "../ui/button";
 import { useState } from "react";
 
+interface NAvigationProps {
+  label: string;
+  active: boolean;
+  href: string;
+}
+
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Navigation items
-  const navItems = [
-    { label: "Home", active: true, url: "/" },
-    { label: "About", active: false, url: "#about" },
-    { label: "Sponsor", active: false },
-    { label: "Volunteer", active: false },
+  const navItems: NAvigationProps[] = [
+    { label: "Home", active: true, href: "/" },
+    { label: "About", active: false, href: "#about" },
+    { label: "Sponsor", active: false, href: "/sponsor"},
+    { label: "Volunteer", active: false, href: "/volunteer" },
   ];
 
   return (
-    <header className="fixed w-full h-[114px] top-0 left-0 bg-[#031632] flex items-center justify-between px-4 md:px-14 z-50">
+    <header className="sticky top-0 z-50 w-full h-[114px] left-0 bg-[#031632] flex items-center justify-between px-4 md:px-14">
       <img 
         className="w-[150px] md:w-[212px] h-auto md:h-[74px]" 
         alt="Logo" 
@@ -54,7 +60,7 @@ export const Navbar = () => {
                     : "font-medium text-white"
                 } text-xl tracking-[0] leading-[normal] whitespace-nowrap`}
               >
-                {item.label}
+                <a href={item.href}>{item.label}</a>
               </div>
             </div>
           ))}
@@ -83,19 +89,21 @@ export const Navbar = () => {
                   : "font-medium text-white"
               } text-xl tracking-[0] leading-[normal] whitespace-nowrap`}
             >
-              {item.label}
+              <a href={item.href}>{item.label}</a>
             </div>
           </div>
         ))}
       </nav>
 
       {/* Desktop Buy Ticket Button */}
+      <a href="https://lu.ma/xuilf4vq" target="_blank" rel="noopener noreferrer">
       <Button className="hidden md:flex w-[199px] h-[60px] items-center justify-center gap-2.5 px-[46px] py-6 bg-app-secondary rounded-2xl overflow-hidden border border-solid border-[#ffffffb2]">
         <span className="relative w-fit [font-family:'Space_Grotesk',Helvetica] font-bold text-[#f6f6f6] text-2xl tracking-[0] leading-[normal]">
-          Buy Ticket
+          Register
         </span>
         <MoveRightIcon className="w-[26px] h-[26px]" />
       </Button>
+      </a>
     </header>
   );
 };

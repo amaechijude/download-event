@@ -31,19 +31,13 @@ export const VisibilitySection: React.FC = () => {
     // Main container with dark background and relative positioning for the button
     <div className="bg-slate-900 font-sans w-full p-8 sm:p-12 md:p-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        {/* Sponsor Button (Absolutely Positioned) */}
         <button className="absolute top-8 right-8 sm:top-12 sm:right-12 bg-lime-400 text-slate-900 font-bold py-3 px-8 rounded-lg text-base hover:bg-lime-300 transition-colors shadow-lg">
           Sponsor
         </button>
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-          {/* Left Section: Text Content */}
+          
           <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <p className="text-orange-400 font-semibold mb-2">Be at Download</p>
-            <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-12">
-              The Best Visibility for every Business
-            </h2>
-
             {/* Features List (Data-driven) */}
             <div className="space-y-8">
               {features.map((feature) => (
