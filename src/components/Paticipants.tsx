@@ -1,6 +1,5 @@
-import { Button } from "../ui/button";
-import { Card } from "../ui/card";
-import { Separator } from "../ui/separator";
+import { Button } from "./ui/button";
+import { Card } from "./ui/card";
 
 // Feature data for mapping
 const features = [
@@ -57,18 +56,18 @@ export const Participants = (): JSX.Element => {
       <Card className="absolute w-[630px] h-[900px] top-[331px] left-[767px] border-none">
         <div className="relative h-[900px]">
           <div className="absolute w-[618px] h-[887px] top-[13px] left-[13px] bg-[#bdd733] rounded-xl" />
-          <div className="absolute w-[618px] h-[888px] top-0 left-0 rounded-xl shadow-[10.61px_10.61px_21.23px_#0000001a,-10.61px_-10.61px_21.23px_#0000001a] bg-[url(/stand.png)] bg-cover bg-[50%_50%]" />
+          <div className="absolute w-[618px] h-[888px] top-0 left-0 rounded-xl shadow-xl bg-[url(/stand.png)] bg-cover bg-[50%_50%]" />
         </div>
       </Card>
 
-      <section className="absolute top-[331px] left-[166px]">
+      {/* <section className="absolute top-[331px] left-[166px]">
         {features.map((feature, index) => (
           <div
             key={feature.id}
             className="w-[541px] h-[182px] mb-[40px]"
-            style={{ marginTop: index > 0 ? "40px" : "0" }}
+            // style={{ marginTop: index > 0 ? "40px" : "0" }}
           >
-            <div className="absolute w-[60px] h-[60px] shadow-[2.04px_2.04px_4.08px_#0000000d,-2.04px_-2.04px_4.08px_#0000000d]">
+            <div className="absolute w-[60px] h-[60px] shadow-sm">
               <div className="relative w-16 h-[52px] top-1">
                 <img
                   className="absolute w-[45px] h-[52px] top-0 left-[18px]"
@@ -93,6 +92,30 @@ export const Participants = (): JSX.Element => {
             </p>
 
             <Separator className="absolute w-[541px] h-[3px] top-[182px] left-0 bg-white/20" />
+          </div>
+        ))}
+      </section> */}
+      {/* <section className="w-full max-w-[600px] mx-auto py-12 px-6"> */}
+      <section className="absolute top-[331px] left-[166px]">
+        {features.map((feature) => (
+          <div key={feature.id} className="mb-12 last:mb-0">
+            <div className="flex items-center mb-6">
+              <div className="relative mr-4">
+                <div className="w-8 h-8 bg-orange-500 transform rotate-45 rounded-sm"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-45">
+                  <span className="text-white font-bold text-sm">
+                    {feature.id}
+                  </span>
+                </div>
+              </div>
+              <h3 className="text-white text-3xl font-bold font-['Space_Grotesk'] leading-tight">
+                {feature.title}
+              </h3>
+            </div>
+            <p className="text-white text-lg font-medium font-['Space_Grotesk'] leading-relaxed mb-8 max-w-[540px]">
+              {feature.description}
+            </p>
+            <div className="w-full h-[2px] bg-white/20"></div>
           </div>
         ))}
       </section>

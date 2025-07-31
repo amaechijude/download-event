@@ -1,6 +1,6 @@
 import { MoveRightIcon } from "lucide-react";
-import { Button } from "../../components/ui/button";
-import { CountdownTimer } from "../../components/CountdownTimer/CountdownTimer";
+import { Button } from "./ui/button";
+import { CountdownTimer } from "./CountdownTimer";
 
 export const DesktopHero = (): JSX.Element => {
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Separator } from "../ui/separator";
+import { Separator } from "./ui/separator";
 
 export const Footer2: React.FC = () => {
   return (

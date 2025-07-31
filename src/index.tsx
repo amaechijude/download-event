@@ -6,10 +6,10 @@ import {
   Route,
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import { NotFound } from "./screens/Notfound";
-import { Navbar } from "./components/Navbar/Navbar";
+import { NotFound } from "./components/Notfound";
+import { Navbar } from "./components/Navbar";
 import Sponsor from "./pages/Sponsor";
-import { Footer2 } from "./components/Footer/Footer";
+import { Footer2 } from "./components/Footer";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>

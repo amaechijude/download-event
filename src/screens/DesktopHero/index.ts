@@ -1,1 +1,0 @@
-export { DesktopHero } from "./DesktopHero";
