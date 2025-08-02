@@ -39,7 +39,7 @@ export default function Hero() {
 
             {/* Countdown Timer */}
             <Countdown
-              dateTime={new Date("2025-09-06T01:09:00")}
+              dateTime={new Date("2025-09-06T09:00:00+01:00")}
             />
           </div>
           {/* Register Button */}
@@ -70,7 +70,7 @@ export default function Hero() {
                   WHEN?
                 </div>
                 <div className="text-white text-lg sm:text-xl font-semibold">
-                  6th February, 2025
+                  6th September, 2025
                 </div>
               </div>
             </div>
@@ -82,13 +82,13 @@ export default function Hero() {
                   Classic Munich Hotel, Nnewi
                 </div>
               </div>
-              <button
+              <Button
                 onClick={handleLocationClick}
                 className="w-12 h-12 bg-orange-500 hover:bg-orange-600 rounded-full flex items-center justify-center transition-colors duration-200 cursor-pointer"
                 title="View location on map"
               >
                 <MapPin className="w-6 h-6 text-white" />
-              </button>
+              </Button>
             </div>
           </div>
         </div>

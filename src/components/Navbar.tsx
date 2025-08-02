@@ -14,7 +14,6 @@ export const Navbar = () => {
   // Navigation items
   const navItems: NAvigationProps[] = [
     { label: "Home", active: true, href: "/" },
-    { label: "About", active: false, href: "/" },
     { label: "Sponsor", active: false, href: "/sponsor"},
     { label: "Volunteer", active: false, href: "/volunteer" },
   ];
@@ -22,10 +21,7 @@ export const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-[#031632] flex items-center justify-between">
       <a href="/">
-      <img
-        alt="Logo"
-        src="/logo.png"
-      />
+        <img alt="Logo" src="/logo.png" />
       </a>
       {/* Mobile Menu Button */}
       <button
@@ -71,11 +67,11 @@ export const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="w-full max-w-[199px] h-[60px] flex items-center justify-center gap-2.5 px-[46px] py-6 bg-app-secondary rounded-2xl overflow-hidden border border-solid border-[#ffffffb2]">
-              <span className="relative w-fit [font-family:'Space_Grotesk',Helvetica] font-bold text-[#f6f6f6] text-2xl tracking-[0] leading-[normal]">
+            <Button className="flex items-center justify-center gap-2.5 px-6 sm:px-[46px] py-4 sm:py-6 bg-app-secondary rounded-xl sm:rounded-2xl overflow-hidden border border-solid border-[#ffffffb2]">
+              <span className="relative w-fit [font-family:'Space_Grotesk',Helvetica] font-bold text-[#f6f6f6] text-2xl">
                 Register
               </span>
-              <MoveRightIcon className="w-[26px] h-[26px]" />
+              <MoveRightIcon />
             </Button>
           </a>
         </nav>
@@ -115,7 +111,7 @@ export const Navbar = () => {
           <span className="relative w-fit [font-family:'Space_Grotesk',Helvetica] font-bold text-[#f6f6f6] text-2xl">
             Register
           </span>
-          <MoveRightIcon/>
+          <MoveRightIcon />
         </Button>
       </a>
     </header>
