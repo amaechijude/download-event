@@ -12,11 +12,17 @@ export const AboutUs: React.FC = () => {
         <div className="flex flex-col md:flex-row">
           {/* Image Section (Left) */}
           <div className="w-full md:w-5/12 flex items-center justify-center p-6 bg-black md:bg-transparent">
-            <img
-              src="ice.png"
-              alt="Founder portrait"
-              className="rounded-lg w-full max-w-sm h-auto object-cover"
-            />
+            <a
+              href="https://www.icehub-ng.com/about.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="icehub.png"
+                alt="Founder portrait"
+                className="rounded-lg w-full max-w-sm h-auto object-fill"
+              />
+            </a>
           </div>
 
           {/* Text Section (Right) */}

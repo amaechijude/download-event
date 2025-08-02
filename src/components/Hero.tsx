@@ -1,6 +1,6 @@
 import { Calendar, MapPin, MoveRightIcon } from "lucide-react";
 import { Button } from "./ui/button";
-import { Countdown } from "./dumps/CountdownTimer";
+import { Countdown } from "./CountdownTimer";
 
 export default function Hero() {
 

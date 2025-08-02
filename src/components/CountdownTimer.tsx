@@ -52,16 +52,16 @@ export function Countdown({dateTime} : {dateTime: Date}) {
   ];
 
   return (
-    <div className="flex justify-center space-x-4 mb-12">
+    <div className="flex flex-wrap justify-center gap-4 mb-12 px-4">
       {countdownItems.map((item) => (
         <div
           key={item.label}
-          className="border border-white rounded-lg p-4 min-w-[80px]"
+          className="border border-white rounded-lg p-3 sm:p-4 w-[70px] sm:w-[80px]"
         >
-          <div className="text-3xl font-bold text-white">
+          <div className="text-2xl sm:text-3xl font-bold text-white">
             {item.value}
           </div>
-          <div className="text-sm text-gray-300">{item.label}</div>
+          <div className="text-xs sm:text-sm text-gray-300">{item.label}</div>
         </div>
       ))}
     </div>
