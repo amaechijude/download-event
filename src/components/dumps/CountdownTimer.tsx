@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { Card } from "./ui/card";
+import { useState, useEffect } from "react";
 
 interface TimeLeft {
   days: number;
@@ -8,7 +7,8 @@ interface TimeLeft {
   seconds: number;
 }
 
-export const CountdownTimer = () => {
+
+export function Countdown({dateTime} : {dateTime: Date}) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
@@ -16,8 +16,9 @@ export const CountdownTimer = () => {
     seconds: 0,
   });
 
+
   useEffect(() => {
-    const targetDate = new Date("2025-09-06T00:00:00");
+    const targetDate = dateTime;
 
     const calculateTimeLeft = () => {
       const now = new Date();
@@ -51,22 +52,18 @@ export const CountdownTimer = () => {
   ];
 
   return (
-    <div className="inline-flex items-center gap-2 md:gap-5 relative flex-[0_0_auto]">
-      {countdownItems.map((item, index) => (
-        <Card
-          key={`countdown-${index}`}
-          className="relative w-[80px] md:w-[102px] h-[80px] md:h-[102px] mt-[-1.00px] mb-[-1.00px] bg-[#0000001f] rounded-[5px] overflow-hidden border border-solid border-[#ffffffcc]"
+    <div className="flex justify-center space-x-4 mb-12">
+      {countdownItems.map((item) => (
+        <div
+          key={item.label}
+          className="border border-white rounded-lg p-4 min-w-[80px]"
         >
-          <div className="relative w-full h-full flex flex-col items-center justify-center">
-            <div className="[font-family:'Bricolage_Grotesque_24pt_Condensed-Bold',Helvetica] font-bold text-white text-3xl md:text-[52px] leading-tight md:leading-[78px]">
-              {item.value}
-            </div>
-            <div className="[font-family:'Bricolage_Grotesque_24pt_Condensed-Medium',Helvetica] font-medium text-white text-sm md:text-xl leading-tight md:leading-[30px]">
-              {item.label}
-            </div>
+          <div className="text-3xl font-bold text-white">
+            {item.value}
           </div>
-        </Card>
+          <div className="text-sm text-gray-300">{item.label}</div>
+        </div>
       ))}
     </div>
   );
-};
+}

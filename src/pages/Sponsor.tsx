@@ -3,7 +3,7 @@ import { SponsorForm } from "../components/SponsorForm";
 export default function App() {
   return (
     <>
-      <div className="relative min-h-screen bg-brand-dark bg-wavy-pattern bg-repeat-x overflow-x-hidden">
+      <div className="relative min-h-screen bg-[#031632] overflow-x-hidden">
         <img
           src="/sponsor-bg.png"
           alt="Background Pattern"

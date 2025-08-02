@@ -28,7 +28,9 @@ export const Footer2: React.FC = () => {
           {/* Logo and description */}
           <div className="max-w-md">
             <div className="flex items-center mb-6">
-              <img className="w-[212px] h-[74px]" alt="Logo" src="/logo.png" />
+              <a href="/">
+                <img className="w-[212px] h-[74px]" alt="Logo" src="/logo.png" />
+                </a>
             </div>
             <p className="text-gray-300 leading-relaxed">
               Download is a forward-thinking annual conference that brings

@@ -14,19 +14,19 @@ export const Navbar = () => {
   // Navigation items
   const navItems: NAvigationProps[] = [
     { label: "Home", active: true, href: "/" },
-    { label: "About", active: false, href: "#about" },
+    { label: "About", active: false, href: "/" },
     { label: "Sponsor", active: false, href: "/sponsor"},
     { label: "Volunteer", active: false, href: "/volunteer" },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[#031632] flex items-center justify-between">
+      <a href="/">
       <img
-        // className="w-[150px] md:w-[212px] h-auto md:h-[74px]"
         alt="Logo"
         src="/logo.png"
       />
-
+      </a>
       {/* Mobile Menu Button */}
       <button
         className="md:hidden text-white p-2 right-0"
