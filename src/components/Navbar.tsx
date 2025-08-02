@@ -20,29 +20,29 @@ export const Navbar = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full h-[114px] left-0 bg-[#031632] flex items-center justify-between px-4 md:px-14">
-      <img 
-        className="w-[150px] md:w-[212px] h-auto md:h-[74px]" 
-        alt="Logo" 
-        src="/logo.png" 
+    <header className="sticky top-0 z-50 w-full bg-[#031632] flex items-center justify-between">
+      <img
+        // className="w-[150px] md:w-[212px] h-auto md:h-[74px]"
+        alt="Logo"
+        src="/logo.png"
       />
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden text-white p-2"
+        className="md:hidden text-white p-2 right-0"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
       >
         {isMobileMenuOpen ? (
-          <X className="w-6 h-6" />
+          <X className="w-6 h-6 right-0" />
         ) : (
-          <Menu className="w-6 h-6" />
+          <Menu className="w-6 h-6 right-0" />
         )}
       </button>
 
       {/* Mobile Menu Panel */}
       <div
         className={`md:hidden fixed inset-0 top-[114px] bg-[#031632] transition-transform duration-300 ease-in-out ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <nav className="flex flex-col items-center gap-6 p-8">
@@ -50,7 +50,9 @@ export const Navbar = () => {
             <div
               key={`mobile-nav-${index}`}
               className={`p-2.5 ${
-                item.active ? "border-b [border-bottom-style:solid] border-[#f48636]" : ""
+                item.active
+                  ? "border-b [border-bottom-style:solid] border-[#f48636]"
+                  : ""
               }`}
             >
               <div
@@ -64,12 +66,18 @@ export const Navbar = () => {
               </div>
             </div>
           ))}
-          <Button className="w-full max-w-[199px] h-[60px] flex items-center justify-center gap-2.5 px-[46px] py-6 bg-app-secondary rounded-2xl overflow-hidden border border-solid border-[#ffffffb2]">
-            <span className="relative w-fit [font-family:'Space_Grotesk',Helvetica] font-bold text-[#f6f6f6] text-2xl tracking-[0] leading-[normal]">
-              Buy Ticket
-            </span>
-            <MoveRightIcon className="w-[26px] h-[26px]" />
-          </Button>
+          <a
+            href="https://lu.ma/xuilf4vq"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="w-full max-w-[199px] h-[60px] flex items-center justify-center gap-2.5 px-[46px] py-6 bg-app-secondary rounded-2xl overflow-hidden border border-solid border-[#ffffffb2]">
+              <span className="relative w-fit [font-family:'Space_Grotesk',Helvetica] font-bold text-[#f6f6f6] text-2xl tracking-[0] leading-[normal]">
+                Register
+              </span>
+              <MoveRightIcon className="w-[26px] h-[26px]" />
+            </Button>
+          </a>
         </nav>
       </div>
 
@@ -79,7 +87,9 @@ export const Navbar = () => {
           <div
             key={`nav-${index}`}
             className={`inline-flex items-center justify-center gap-2.5 p-2.5 relative flex-[0_0_auto] rounded-[10px] ${
-              item.active ? "border-b [border-bottom-style:solid] border-[#f48636]" : ""
+              item.active
+                ? "border-b [border-bottom-style:solid] border-[#f48636]"
+                : ""
             }`}
           >
             <div
@@ -96,13 +106,17 @@ export const Navbar = () => {
       </nav>
 
       {/* Desktop Buy Ticket Button */}
-      <a href="https://lu.ma/xuilf4vq" target="_blank" rel="noopener noreferrer">
-      <Button className="hidden md:flex w-[199px] h-[60px] items-center justify-center gap-2.5 px-[46px] py-6 bg-app-secondary rounded-2xl overflow-hidden border border-solid border-[#ffffffb2]">
-        <span className="relative w-fit [font-family:'Space_Grotesk',Helvetica] font-bold text-[#f6f6f6] text-2xl tracking-[0] leading-[normal]">
-          Register
-        </span>
-        <MoveRightIcon className="w-[26px] h-[26px]" />
-      </Button>
+      <a
+        href="https://lu.ma/xuilf4vq"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Button className="hidden md:flex items-center justify-center gap-2.5 px-[46px] py-6 bg-app-secondary rounded-2xl overflow-hidden border border-solid border-[#ffffffb2]">
+          <span className="relative w-fit [font-family:'Space_Grotesk',Helvetica] font-bold text-[#f6f6f6] text-2xl">
+            Register
+          </span>
+          <MoveRightIcon/>
+        </Button>
       </a>
     </header>
   );

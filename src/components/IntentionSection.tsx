@@ -1,6 +1,6 @@
 export function IntentionSection() {
   return (
-    <section className="bg-[#0312632] py-16 px-8">
+    <section className="min-h-screen bg-[#031632] py-16 px-8">
       <div className="max-w-4xl mx-auto">
         {/* Main heading */}
         <h2 className="text-orange-400 text-3xl md:text-4xl font-bold text-center mb-12">
@@ -8,7 +8,7 @@ export function IntentionSection() {
         </h2>
 
         {/* Vision card */}
-        <div className="bg-white/5 backdrop-blur-md border border-white/20  rounded-2xl p-8 mb-8">
+        <div className="bg-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-8 mb-8">
           <h3 className="text-orange-400 text-2xl md:text-3xl font-bold text-center mb-6">
             Our Vision
           </h3>

@@ -8,7 +8,7 @@ interface DownloadSection {
   imageUrl: string;
 }
 
-export const Participants: React.FC = () => {
+export const Participate: React.FC = () => {
   const sections: DownloadSection[] = [
     {
       id: "showcase",
@@ -40,7 +40,7 @@ export const Participants: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-primary text-white">
+    <div className="min-h-screen bg-[#031632] text-white">
       <div className="container mx-auto px-6 py-16">
         {/* Header */}
         <div className="text-center mb-16">

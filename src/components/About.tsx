@@ -3,7 +3,10 @@ import React from "react";
 export const AboutUs: React.FC = () => {
   return (
     // Main container with a dark background matching the theme
-    <div id="about" className="bg-slate-900 font-sans w-full p-4 sm:p-6 md:p-8">
+    <div
+      id="about"
+      className="min-h-screen bg-[#031632] font-sans w-full p-4 sm:p-6 md:p-8"
+    >
       {/* Centered content with the orange border */}
       <div className="max-w-6xl mx-auto rounded-xl overflow-hidden shadow-lg">
         <div className="flex flex-col md:flex-row">

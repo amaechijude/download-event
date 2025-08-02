@@ -23,11 +23,11 @@ const teamMembers: TeamMember[] = [
 
 export const TeamSection = () => {
   return (
-    <div className="py-24">
+    <div className="py-24 bg-[#031632]">
       {/* Header Section */}
       <div className="text-center mb-16">
-        <p className="text-lg font-medium mb-4">Meet the Team</p>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 max-w-4xl mx-auto">
+        <p className="text-lg font-medium text-orange-400 mb-4">Meet the Team</p>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 max-w-4xl mx-auto">
           Get to know the brilliant minds driving our Vision forward.
         </h2>
       </div>
@@ -35,17 +35,17 @@ export const TeamSection = () => {
       {/* Team Members Grid */}
       <div className="flex flex-col md:flex-row gap-8 justify-center items-center max-w-4xl mx-auto">
         {teamMembers.map((member, index) => (
-          <div
-            key={index}
-            className={`rounded-2xl p-8 text-center w-full md:w-80`}
-          >
+          <div key={index} className="text-center">
             <img
               src={member.image}
               alt={member.alt}
-              width={200}
-              height={200}
-              className="w-full h-full object-cover"
+              width={300}
+              height={300}
             />
+            {/* <h3 className="text-2xl font-bold text-white mt-4">
+              {member.name}
+            </h3>
+            <p className="text-lg text-orange-400">{member.title}</p> */}
           </div>
         ))}
       </div>
