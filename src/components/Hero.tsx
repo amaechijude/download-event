@@ -13,16 +13,16 @@ export default function Hero() {
 
 
   return (
-    <div className="min-h-screen bg-[#031632] w-full bg-[url('/hero-bg.png')] relative overflow-hidden">
+    <div className="min-h-[90vh] bg-[#031632] w-full bg-[url('/hero-bg.png')] relative overflow-hidden">
       {/* Grid Background */}
-      <img
-        className="absolute w-full h-[501px] bottom-0 left-0"
-        alt="Perspective grid"
-        src="/perspective-grid.png"
-      />
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col min-h-screen">
+      <div className="relative z-10 flex flex-col min-h-[90vh]">
+        <img
+          className="absolute w-full h-[501px] bottom-0 left-0"
+          alt="Perspective grid"
+          src="/perspective-grid.png"
+        />
         {/* Hero Section */}
         <div className="flex-1 flex flex-col items-center justify-center px-8 py-16">
           <div className="text-center max-w-4xl mx-auto">
@@ -38,9 +38,7 @@ export default function Hero() {
             </p>
 
             {/* Countdown Timer */}
-            <Countdown
-              dateTime={new Date("2025-09-06T09:00:00+01:00")}
-            />
+            <Countdown dateTime={new Date("2025-09-06T09:00:00+01:00")} />
           </div>
           {/* Register Button */}
           <a

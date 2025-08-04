@@ -19,7 +19,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#031632] flex items-center justify-between">
+    <header className="sticky top-0 z-50 max-h[10vh] w-full bg-[#031632] flex items-center justify-between">
       <a href="/">
         <img alt="Logo" src="/logo.png" />
       </a>
