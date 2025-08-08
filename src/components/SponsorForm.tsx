@@ -117,7 +117,7 @@ export function SponsorForm() {
                 name="telephone"
                 value={formData.telephone}
                 onChange={handleInputChange}
-                placeholder="+000-000-0000-000"
+                placeholder="+234 123 456 789"
                 className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all duration-200"
               />
             </div>
