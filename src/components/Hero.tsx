@@ -1,3 +1,4 @@
+"use client";
 import { Calendar, MapPin, MoveRightIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { Countdown } from "./CountdownTimer";

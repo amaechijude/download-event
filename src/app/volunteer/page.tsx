@@ -1,9 +1,12 @@
+import Image from "next/image";
 
 export default function Volunteer() {
   return (
     <>
       <div className="relative bg-[#031632] overflow-x-hidden">
-        <img
+        <Image
+          width={1000}
+          height={1000}
           src="/sponsor-bg.png"
           alt="Background Pattern"
           className="absolute top-0 left-0 w-full h-full object-cover"

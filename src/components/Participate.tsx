@@ -1,4 +1,3 @@
-import React from "react";
 
 interface DownloadSection {
   id: string;
@@ -8,7 +7,7 @@ interface DownloadSection {
   imageUrl: string;
 }
 
-export const Participate: React.FC = () => {
+export const Participate = () => {
   const sections: DownloadSection[] = [
     {
       id: "showcase",

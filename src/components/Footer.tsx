@@ -1,8 +1,7 @@
-import React from "react";
 import { Separator } from "./ui/separator";
 import { SocialIconsLucidReact } from "./SocilaIcons";
 
-export const Footer2: React.FC = () => {
+export const Footer2 = () => {
   return (
     <footer className="bg-[#031632] relative overflow-hidden">
       {/* Decorative stars */}

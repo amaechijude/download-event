@@ -1,4 +1,4 @@
-import { SponsorForm } from "../components/SponsorForm";
+import { SponsorForm } from "@/components/SponsorForm"; 
 
 export default function App() {
   return (

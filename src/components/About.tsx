@@ -1,6 +1,5 @@
-import React from "react";
 
-export const AboutUs: React.FC = () => {
+export const AboutUs = () => {
   return (
     // Main container with a dark background matching the theme
     <div
@@ -34,7 +33,7 @@ export const AboutUs: React.FC = () => {
               Dream, Develop, Dominate.
             </h1>
             <p className="text-slate-300 text-base lg:text-lg leading-relaxed mb-4">
-              Download is more than a tech event – it's where ambition meets
+              Download is more than a tech event - it's where ambition meets
               innovation. We equip creators, entrepreneurs, and forward-thinkers
               with the tools, insights, and digital intelligence needed to
               thrive in today's connected world.
@@ -47,7 +46,7 @@ export const AboutUs: React.FC = () => {
             </p>
             <p className="text-slate-300 text-base lg:text-lg leading-relaxed">
               Whether you're growing a brand, shaping a cause, or launching the
-              next big idea – Download 2025 is your blueprint for navigating and
+              next big idea - Download 2025 is your blueprint for navigating and
               dominating the digital frontier.
             </p>
           </div>

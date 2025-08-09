@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ContactUs() {
   return (
     <div className="relative min-h-screen bg-[#031632] overflow-x-hidden flex items-center justify-center py-16">
@@ -62,7 +64,7 @@ export default function ContactUs() {
                 </svg>
                 <span className="text-orange-400 font-semibold text-lg">Email Us</span>
               </div>
-              <span className="text-white block break-all">downloadtechevent@gmail.com</span>
+              <Link href="mailto:downloadtechevent@gmail.com" className="text-white block break-all">downloadtechevent@gmail.com</Link>
             </div>
           </div>
         </div>
